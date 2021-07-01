@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo12"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:drawableLeft="@drawable/ic_direccion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.411"
+        android:textColor="#fff"
+        android:focusable="false"/>
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:drawableLeft="@android:drawable/stat_sys_phone_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484" />
+
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:drawableLeft="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:drawableLeft="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:drawableLeft="@drawable/ic_pin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <TextView
+        android:id="@+id/doctor_info_correo_txt"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Correo electrónico"
+        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <Button
+        android:id="@+id/doctor_info_regresar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        app:backgroundTint="@color/boton_cerrar_sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828"
+        android:background="@drawable/btn_medicacion_color"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:id="@+id/doctor_id_editTxt"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:textSize="20dp"
+        android:hint="PIN"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        />
+
+    <TextView
+        android:id="@+id/doctor_nombre_info_txt"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Nombre Completo"
+        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <TextView
+        android:id="@+id/doctor_dir_info_txt"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Dirección"
+        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <TextView
+        android:id="@+id/doctor_tel_info_txt"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="textPersonName"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#fff"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OxigenApp"
+        android:textSize="60dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:src="@drawable/doctor_medicacion"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo12"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/bienvenido_txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Bienvenido"
+            android:textAlignment="center"
+            android:textSize="50dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/bienvenido_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/historico_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_historico_color"
+            android:text="Historico"
+            android:textColor="#fff"
+            app:backgroundTint="#398AE5"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/ic_historico"/>
+
+        <Button
+            android:id="@+id/diagrama_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_diagrama_color"
+            android:drawableLeft="@drawable/ic_diagrama"
+            android:text="Diagrama"
+            android:textColor="#fff"
+            app:backgroundTint="#2A66A9" />
+
+        <Button
+            android:id="@+id/medicacion_Pac_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicacion"
+            android:background="@drawable/btn_medicacion_color"
+            app:backgroundTint="#0B3461"
+            android:drawableLeft="@drawable/ic_medicacacion"
+            android:layout_marginBottom="20dp"
+            android:textColor="#fff"
+
+            />
+
+        <Button
+            android:id="@+id/info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informacion"
+            android:background="@drawable/btn_informacion_color"
+            app:backgroundTint="#D03535"
+            android:drawableLeft="@drawable/ic_informacion"
+            android:layout_marginBottom="20dp"
+            android:textColor="#fff"
+            />
+
+        <Button
+            android:id="@+id/Conectar_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conectar Dispositivo"
+            android:layout_marginBottom="40dp"
+            android:drawableLeft="@drawable/ic_conectar"
+            android:background="@drawable/btn_informacion_color"
+            app:backgroundTint="#C4992F"
+            android:textColor="#fff"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/logout_paciente_btn"
+                android:layout_width="60dp"
+                android:layout_height="58dp"
+                android:onClick="logoutAdmin"
+                android:drawableLeft="@drawable/ic_cerrar_sesion"
+                app:backgroundTint="@color/boton_cerrar_sesion" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cerrar Sesión"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:paddingLeft="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

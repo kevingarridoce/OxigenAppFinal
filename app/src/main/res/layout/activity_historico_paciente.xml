@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Historico_Paciente">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo12"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="607dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="65dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Desde"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:id="@+id/editTextFechaHistorico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:background="@drawable/input_form_medicamento"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hasta"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:id="@+id/editTextFechaHistorico2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusable="false"
+                android:background="@drawable/input_form_medicamento"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#fff"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ButtonBuscarFechaHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_historico_color"
+            android:text="Buscar"
+            android:textColor="#fff"
+            app:backgroundTint="#398AE5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="59dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Porcentaje"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="17dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Tipo"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="187dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Fecha"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="414dp"
+            android:layout_marginBottom="-10dp"
+            android:background="@drawable/input_form_medicamento">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/regresar_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:textColor="#fff"
+        app:backgroundTint="@color/boton_cerrar_sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_historico_color"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

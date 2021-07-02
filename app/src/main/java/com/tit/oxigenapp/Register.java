@@ -1,5 +1,7 @@
 package com.tit.oxigenapp;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -22,6 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,9 +36,13 @@ public class Register extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     Spinner spRol, spGenero;
+    private int nYear, nMonth, nDay,sYear,sMonth, sDay;
 
     String [] arrayRol = {"Doctor", "Paciente"};
     String [] arrayGenero = {"Masculino", "Femenino"};
+    static final int DATE_ID = 0;
+    Calendar C= Calendar.getInstance();
+    int validacion;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -49,11 +57,28 @@ public class Register extends AppCompatActivity {
         phone = findViewById(R.id.phone_register_txt);
         addres = findViewById(R.id.adrres_register_txt);
         password = findViewById(R.id.password_register_txt);
-        date = findViewById(R.id.date_register_txt);
+       date = findViewById(R.id.date_register_txt);
         spRol = findViewById(R.id.spinner_Rol);
         spGenero = findViewById(R.id.spinner_Genero);
         registerBtn =  findViewById(R.id.create_acount_btn);
         loginBtn =  findViewById(R.id.login_register_btn);
+        sMonth=C.get(Calendar.MONTH)+1;
+        sDay=C.get(Calendar.DAY_OF_MONTH);
+        sYear=C.get(Calendar.YEAR);
+
+       // date= (EditText)findViewById(R.id.editTextFechaDiagrama);
+
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                showDialog(DATE_ID);
+
+                validacion=1;
+            }
+        });
+
+
 
         spRol.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.style_spinner,arrayRol));
         spGenero.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.style_spinner,arrayGenero));
@@ -150,5 +175,34 @@ public class Register extends AppCompatActivity {
             valid = true;
         }
         return valid;
+    }
+    private void colocar_fecha() {
+        date.setText(nDay + "/" + (nMonth +1   ) + "/" + nYear);
+
+    }
+    private DatePickerDialog.OnDateSetListener mDateSetListener =
+            new DatePickerDialog.OnDateSetListener() {
+                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                    nYear = year;
+                    nMonth = monthOfYear;
+                    nDay = dayOfMonth;
+                    colocar_fecha();
+
+                }
+
+            };
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        switch (id) {
+            case DATE_ID:
+                return new DatePickerDialog(this, mDateSetListener, sYear, sMonth-1, sDay);
+
+
+        }
+
+
+        return null;
     }
 }

@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_fondo_color2"
                 android:text="Registrarse"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textColor="#fff"
                 app:backgroundTint="@color/boton_registro" />
         </LinearLayout>

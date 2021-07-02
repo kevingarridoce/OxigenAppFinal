@@ -75,16 +75,15 @@
         app:layout_constraintVertical_bias="0.559" />
 
 
-
     <EditText
         android:id="@+id/doctor_info_correo_txt"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
+        android:layout_width="306dp"
+        android:layout_height="44dp"
         android:ems="10"
         android:hint="Correo electrónico"
         android:inputType="textPersonName"
-        android:textColorHint="#fff"
         android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
@@ -110,31 +109,32 @@
 
     <TextView
         android:id="@+id/doctor_id_editTxt"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
+        android:layout_width="305dp"
+        android:layout_height="36dp"
         android:ems="10"
+        android:focusable="false"
         android:hint="PIN"
         android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.566"
-        android:textColorHint="#fff"
-        android:textColor="#fff"
-        android:focusable="false"/>
+        android:layout_marginTop="15dp"/>
 
 
     <EditText
         android:id="@+id/doctor_nombre_info_txt"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
+        android:layout_width="307dp"
+        android:layout_height="39dp"
         android:ems="10"
         android:hint="Nombre Completo"
         android:inputType="textPersonName"
-        android:textColorHint="#fff"
         android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
@@ -144,35 +144,35 @@
 
     <EditText
         android:id="@+id/doctor_dir_info_txt"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
+        android:layout_width="302dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="Dirección"
         android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416"
-        android:textColorHint="#fff"
-        android:textColor="#fff" />
+        app:layout_constraintVertical_bias="0.416" />
 
     <EditText
         android:id="@+id/doctor_tel_info_txt"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
+        android:layout_width="305dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="Teléfono"
         android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49"
-        android:textColorHint="#fff"
-        android:textColor="#fff" />
+        app:layout_constraintVertical_bias="0.49" />
 
     <Button
         android:id="@+id/actualizar_btn"

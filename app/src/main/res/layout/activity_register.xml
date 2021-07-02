@@ -28,7 +28,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="10dp"
             android:padding="10dp"
             android:src="@drawable/usuario" />
@@ -37,17 +37,18 @@
             android:id="@+id/name_register_txt"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_form"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
             android:textColor="@color/white"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:textColorHint="#ccc"
             android:ems="10"
             android:hint="Nombre Completo"
             android:inputType="textPersonName"
+            android:textSize="15dp"
             android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
 
         <Spinner
@@ -55,24 +56,26 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:popupBackground="#3E3C3C"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:entries="@array/genero"
+            android:textSize="15dp"
             android:background="@drawable/style_spinner"/>
 
         <EditText
             android:id="@+id/email_register_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:background="@drawable/input_form"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:textColorHint="#ccc"
             android:maxLength= "60"
             android:ems="10"
+            android:textSize="15dp"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress" />
 
@@ -80,33 +83,35 @@
             android:id="@+id/phone_register_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_form"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:textColor="@color/white"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:textColorHint="#ccc"
             android:maxLength= "10"
             android:ems="10"
             android:hint="Celular"
+            android:textSize="15dp"
             android:inputType="phone" />
 
         <EditText
             android:id="@+id/adrres_register_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_form"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:textColorHint="#ccc"
             android:textColor="@color/white"
             android:ems="10"
             android:hint="Direccion"
+            android:textSize="15dp"
 
             android:inputType="textPostalAddress" />
 
@@ -115,41 +120,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_form"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:textColorHint="#ccc"
             android:ems="10"
             android:hint="Contraseña"
+            android:textSize="15dp"
             android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/date_register_txt"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
             android:background="@drawable/input_form"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:textColorHint="#ccc"
             android:textColor="@color/white"
             android:ems="10"
             android:hint="Fecha de Nacimiento: DD/MM/AAAA"
             android:inputType="date"
+            android:textSize="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Spinner
             android:id="@+id/spinner_Rol"
             android:layout_width="match_parent"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="10dp"
             android:popupBackground="#3E3C3C"
             android:textColor="#ccc"
             android:layout_height="45dp"
             android:layout_weight="1"
+            android:textSize="15dp"
             android:entries="@array/opciones"
             android:background="@drawable/style_spinner"/>
 
@@ -170,11 +179,12 @@
                 android:id="@+id/create_acount_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/btn_fondo_color2"
                 android:text="Crear Cuenta"
                 android:textColor="#fff"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 app:backgroundTint="@color/boton_registro" />
 
             <Button
@@ -183,8 +193,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/btn_fondo_color"
-                android:text="Iniciar Sesion"
-                android:textSize="15dp"
+                android:text="Inicio Sesion"
+                android:textSize="10dp"
                 android:textColor="#fff"
                 app:backgroundTint="@color/boton_login" />
 

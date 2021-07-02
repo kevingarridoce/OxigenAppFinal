@@ -17,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -64,10 +66,10 @@ public class Doctor extends AppCompatActivity {
         cerrar=findViewById(R.id.logout_doctor_btn);
         bienvenido_txt = findViewById(R.id.bienvenidoDoctor_txt);
 
-        //obtenerDatos();
 
-        bienvenido_txt.setText(user.getEmail());
 
+        //bienvenido_txt.setText(user.getEmail());
+        obtenerDatos();
         //Lamada de la funcion de carga de paciente
         carga_Paciente();
 
@@ -85,6 +87,8 @@ public class Doctor extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
         idUser = fAuth.getCurrentUser().getUid();
+
+
         DocumentReference nombre = fStore.collection("Usuarios").document(idUser);
         CollectionReference pacienteRef = fStore.collection("Usuarios").document(idUser).collection("Pacientes");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.style_spinner, usuarios);
@@ -236,6 +240,7 @@ public class Doctor extends AppCompatActivity {
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bienvenido_txt.setText("");
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(),Login.class));
                 finish();
@@ -243,15 +248,22 @@ public class Doctor extends AppCompatActivity {
         });
     }
 
-    /*private void obtenerDatos() {
+    private void obtenerDatos() {
         fAuth = FirebaseAuth.getInstance();
+
         idUser = fAuth.getCurrentUser().getUid();
-        DocumentReference documentReference = fStore.collection("Usuarios").document(idUser);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+
+        DocumentReference documentReference2 = fStore.collection("Usuarios").document(idUser);
+        documentReference2.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
                 bienvenido_txt.setText(documentSnapshot.getString("Nombre Completo"));
             }
-        });
-    }*/
+        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+    }
 }

@@ -124,7 +124,7 @@ public class Medicacion_Paciente extends AppCompatActivity {
 
 
         } else {
-            nomDoctor.setText("Espere a la asignacion de Doctor.");
+            nomDoctor.setText("Sin asignacion de Doctor.");
         }
 
 

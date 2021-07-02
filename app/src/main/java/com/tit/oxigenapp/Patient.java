@@ -1,5 +1,6 @@
 package com.tit.oxigenapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlarmManager;
@@ -10,9 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.content.BroadcastReceiver;
@@ -47,8 +51,8 @@ public class Patient extends AppCompatActivity {
         idUser = fAuth.getCurrentUser().getUid();
 
         Button logout = findViewById(R.id.logout_paciente_btn);
-
-        bienvenido_txt.setText(user.getEmail());
+obtenerDatos();
+       // bienvenido_txt.setText(user.getEmail());
 
         //Para llamar a otras clases y interfaz
         /*logout.setOnClickListener(new View.OnClickListener() {
@@ -107,5 +111,24 @@ public class Patient extends AppCompatActivity {
          alarmManager.cancel(sender);
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
+    }
+
+    private void obtenerDatos() {
+        fAuth = FirebaseAuth.getInstance();
+
+        idUser = fAuth.getCurrentUser().getUid();
+
+        DocumentReference documentReference2 = fstore.collection("Usuarios").document(idUser);
+        documentReference2.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                bienvenido_txt.setText(documentSnapshot.getString("Nombre Completo"));
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
     }
 }
